@@ -18,6 +18,13 @@ public class Desafio {
         valorImposto = 0.05F * valorSalario;
     }
     // TODO Criar as demais condições para as alíquotas de 10,00% e 15,00%.
+    if (valorSalario > 1100 && valorSalario <= 2500){
+        valorImposto = 0.10F * valorSalario;
+
+    }
+    if (valorSalario > 2500){
+        valorImposto = 0.15F * valorSalario;
+    }
 
     // Calcula e imprime a saída (com 2 casas decimais):
     float saida = (valorSalario - valorImposto) + valorBeneficios;
