@@ -12,17 +12,13 @@ public class Desafio {
     float valorSalario = leitorDeEntradas.nextFloat();
     float valorBeneficios = leitorDeEntradas.nextFloat();
 
+    // Atribui a alíquota de imposto mediante o salário:
     float valorImposto = 0;
     if (valorSalario >= 0 && valorSalario <= 1100){
-        // Atribui a alíquota de 5,00% mediante o salário:
         valorImposto = 0.05F * valorSalario;
-    }
-    // TODO Criar as demais condições para as alíquotas de 10,00% e 15,00%.
-    if (valorSalario > 1100 && valorSalario <= 2500){
+    } else if (valorSalario > 1100 && valorSalario <= 2500){
         valorImposto = 0.10F * valorSalario;
-
-    }
-    if (valorSalario > 2500){
+    } else {
         valorImposto = 0.15F * valorSalario;
     }
 
