@@ -20,6 +20,10 @@ function calcularImposto(salario){
     if (salario >= 0 && salario <= 1100){
         aliquota = 0.05;
     }
-    // TODO Criar as demais condições para as alíquotas de 10,00% e 15,00%.
+    else if (valorSalario > 1100 && valorSalario <= 2500){
+        aliquota = 0.10;
+    } else{
+        aliquota = 0.15;
+    }    
     return aliquota * salario;
 }
